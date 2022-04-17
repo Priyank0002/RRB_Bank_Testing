@@ -1,0 +1,4 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.db2.v80.ColumnProxyDB2v80 parentClass="oracle.dbtools.crest.model.design.storage.db2.ColumnProxyDB2">
+   <aa_defined_in_db2_property name="identity" dataType="oracle.dbtools.crest.model.design.storage.db2.v80.ColumnIdentityDB2v80" defaultValue="" xmlName="identity" xmlType="element" getter="getIdentity" setter="setIdentity" reffered="true"/>
+</oracle.dbtools.crest.model.design.storage.db2.v80.ColumnProxyDB2v80>

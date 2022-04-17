@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>Oracle Data Miner Installation</title>
+</head>
+<body>
+<h1>Installing Oracle Data Miner</h1>
+<p>The scripts described in this document are available to manage the
+Oracle Data Miner Repository.
+These scripts are also integrated with Oracle SQL Developer 3.0 to
+allow users to manage the repository through SQL Developer as well.</p>
+<p>It is not necessary to install SQL Developer to run the installation
+scripts for Oracle Data Miner.</p>
+<p> Download the scripts directly from the <a
+ href="http://www.oracle.com/technetwork/database/options/odm/odminer-097463.html">Oracle
+Data
+Miner
+page
+at Oracle Technology Network</a>.</p>
+<p>Download the file and unzip it.</p>
+<p>Using SQL*Plus, log in as SYS, and run the appropriate script.</p>
+<h2>Installing the Oracle Data Miner Repository</h2>
+<p>installodmr.sql installs the Oracle Data Miner Repository; use it as
+follows:</p>
+<pre><code>set serveroutput on<br>set echo on<br>@installodmr.sql <i>default tablespace</i> <i>TEMP tablespace</i>
+</code>
+</pre>
+<p>Example: <code>@installodmr.sql USER TEMP</code>
+</p>
+<p>The initial space requirement for the Data Miner Repository is
+200MB; however, the tablespace will grow as metadata is added.</p>
+<p>The script will take approximately 10 minutes to run for remote
+database installation and 2 minutes for local database installation.</p>
+<p>See <a href="#scripts">Loading and Dropping Sample Tables</a> to
+load sample data. </p>
+<h2>Granting a User the Rights to Access the Repository</h2>
+<p>usergrants.sql <i>user account</i> grants the specified user
+account the rights required by Oracle Data Miner to use the Oracle Data
+Miner Repository. For example,</p>
+<pre><code>@usergrants.sql MININGACCT</code></pre>
+<p>dropusergrants.sql <i>user account</i> revokes all of these grants.  For example,</p><pre><code>@dropusergrants.sql MININGACCT</code></pre>
+
+<p>See <a href="#scripts">Loading and Dropping Sample Tables</a> to
+load sample data. </p>
+<h2>Dropping the Oracle Data Miner Repository</h2>
+<p>dropRepositoryAndUserObjects.sql drops the Repository and the user
+objects. For example, </p>
+<pre><code>@dropRepositoryAndUserObjects.sql</code>
+</pre>
+<p>During the process of dropping the repository:</p>
+<ul>
+  <li>The Database will not allow any new connections to be established
+during this process.</li>
+  <li>Any connections granted rights to the Oracle Data Miner
+Repository will be disconnected.</li>
+</ul>
+<p>These steps are taken to ensure there are no conflicts in dropping
+the repository.</p>
+<p>All workflows and internal tables will be dropped.
+Models created by Oracle Data Miner will not be dropped. Tables created
+by the Create Table node will not be dropped.</p>
+<p>See <a href="#scripts">Loading and Dropping Sample Tables</a> to
+drop sample data.<br>
+</p>
+<h2>Migrating the Oracle Data Miner Repository</h2>
+<p>migrateodmr.sql migrates the Data Miner Repository from an earlier
+version to the current version. All workflows created by users are
+preserved; only the repository software is updated. In future
+migrations, there may be a need to perform a migration of the workflows
+as well.&nbsp; For example, </p>
+<pre><code>@migrateodmr.sql</code><br></pre>
+<p>During the process of migrating the repository:</p>
+<ul>
+  <li>The Database will not allow any new connections to be established.</li>
+  <li>Any connections granted rights to the Oracle Data Miner
+Repository will be disconnected.</li>
+</ul>
+<h2><a name="scripts"></a>Loading and Dropping Sample Tables</h2>
+<p>These scripts load and remove the sample data used in the Cue Cards
+and in the Oracle by Example (OBE) for Oracle Data Miner:</p>
+<ul>
+  <li>instDemoData.sql <i>user account</i> prepares demo data for
+user. The script
+grants user access to SH schema, creates mining_data_* views in user
+account based on SH schema, and .
+load insurance data into table in user account.
+    <p>Example: <code>@instDemoData.sql MYUSER</code></p>
+  </li>
+  <li>dropDemoData.sql <i>user account</i> drops the demo data
+prepared by
+instDemoData.sql.
+    <p>Example: <code>@dropDemoData.sql MYUSER</code></p>
+  </li>
+</ul>
+</body>
+</html>

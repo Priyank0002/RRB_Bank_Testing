@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.businessinfo.BIDocument parentClass="oracle.dbtools.crest.model.design.DesignObject">
+   <property name="reference" dataType="java.lang.String" defaultValue="" xmlName="reference" xmlType="element" getter="getReference" setter="setReference" reffered="false"/>
+   <property name="type" dataType="java.lang.String" defaultValue="" xmlName="type" xmlType="element" getter="getType" setter="setType" reffered="false"/>
+   <roproperty name="elements" dataType="interface java.util.List" getter="getElements"/>
+</oracle.dbtools.crest.model.businessinfo.BIDocument>

@@ -1,0 +1,10 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign parentClass="oracle.dbtools.crest.model.design.DesignPart">
+   <roproperty name="contactSet" dataType="oracle.dbtools.crest.model.businessinfo.BIContactSet" getter="getContactSet"/>
+   <roproperty name="documentSet" dataType="oracle.dbtools.crest.model.businessinfo.BIDocumentSet" getter="getDocumentSet"/>
+   <roproperty name="emailSet" dataType="oracle.dbtools.crest.model.businessinfo.BIEmailSet" getter="getEmailSet"/>
+   <roproperty name="locationSet" dataType="oracle.dbtools.crest.model.businessinfo.BILocationSet" getter="getLocationSet"/>
+   <roproperty name="phoneSet" dataType="oracle.dbtools.crest.model.businessinfo.BIPhoneSet" getter="getPhoneSet"/>
+   <roproperty name="resPartySet" dataType="oracle.dbtools.crest.model.businessinfo.BIResponsiblePartySet" getter="getResPartySet"/>
+   <roproperty name="urlSet" dataType="oracle.dbtools.crest.model.businessinfo.BIResourceLocatorSet" getter="getUrlSet"/>
+</oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign>

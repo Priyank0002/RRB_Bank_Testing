@@ -1,0 +1,256 @@
+<h1 align="left">Oracle SQL Developer Data Modeler 3.0.0 (665)</h1>
+<h2 align="left">Release Notes</h2>
+<h4>January 2011</h4>
+<ul>
+    <li><a href="#Intro">Introduction</a></li>
+    <li><a href="#Platform">Platform Support and System Requirements</a></li>
+    <li><a href="#Intro_1.1">Before you Start</a></li>
+    <li><a href="#nf">New Features</a></li>
+    <li><a href="#Import">Supported Import Formats</a></li>
+    <li><a href="#Export">Supported Export Formats</a></li>
+    <li><a href="#known">Known issues</a></li>
+    <li><a href="#fixed">Bugs Fixed</a></li>
+    <li><a href="#Doc"> Documentation</a></li>
+    <li><a href="#More">Finding More Information</a></li>
+</ul>
+<h3><a name="Intro"></a>Introduction</h3>
+<p>Oracle SQL Developer Data Modeler is a free data modeling and design tool used    to increase developer productivity by providing the means to develop logical,    multi-dimensional, user defined data types, relational and physical data models.    The tool provides full forward engineering, including engineering from Logical    ERD models to Relational models and the reverse, importing from the Data Dictionary    and DDL script generation. The Data Modeler imports from and exports to a variety    of sources and targets, provides a variety of formatting options and validates    the models through a predefined set of design rules. The latest release, SQL    Developer Data Modeler 3.0 includes the ability to create user defined design    rules and transformation scripts. User can also manage their files through integrated    support for Subversion, an open-source version control tool. For more detail    on the latest features and to learn how to use them see the <a href="custom:external:http://www.oracle.com/technetwork/developer-tools/datamodeler/">SQL    Developer Data Modeler </a> home page on the Oracle Technology Network.</p>
+<h3><a name="Platform"></a>Platform Support and System Requirements</h3>
+<p>Oracle SQL Developer Data Modeler runs on the following operating systems:</p>
+<p>- Microsoft Windows (XP, Vista, Windows 7 including x64)<br />
+- Linux<br />
+- Mac OS X</p>
+<p>The following requirements must be met to install and run correctly:</p>
+<p>- JavaTM 1.6 or higher Standard Edition Runtime Environment<br />
+- About 125 MB on Hard Disk<br />
+- 512 MB at a minimum, 1 GB RAM is recommended</p>
+<p><strong>Note: </strong><br />
+- We provide the download with and without the Java Runtime. If you download    the files without the Java Runtime, you'll be prompted on startup for the path    for the JRE. The minimum is JRE 1.6. <br />
+- For the Linux install, download the .rpm file. For the Mac install, download    the macosx.tar.gz file.</p>
+<h3><a name="Intro_1.1"></a>Before You Start</h3>
+<h4>Before Installing</h4>
+<p>If you have worked with the production release of SQL Developer Data Modeler    2.0, then you can save and reuse the default settings you made in the <strong>Tools    &gt; General Options</strong> menu, such as the Default Design Directory and    Formatting Options. After installing SQL Developer Data Modeler 3.0, you can    use the Import/Export function in the <strong>Tools &gt; Preferences &gt; Data    Modeler </strong>menu to import the \datamodeler\bin\settings.xml file.</p>
+<h4><a name="install"></a>Installing</h4>
+<p>- Download and unzip the files into a new and <em>empty</em> directory. <em>Do    not</em> unzip over any existing installations, should you have them.<br />
+- For Linux and Mac OS X installations, the downloaded files <em>do not include    a JRE</em>. When prompted, direct the install to your JRE 1.6 directory. If    JRE 1.5 is already installed and is the default, you will not be prompted. In    this case edit the datamodeler.conf file in the \datamodeler\datamodeler\bin    directory and add SetJavaHome. (e.g. SetJavaHome /usr/lib/jdk16_04)<br />
+- <strong>64-Bit Suppor</strong>t: SQL Developer Data Modeler is supported on    64-bit platforms, ensure you use the 64-bit executable available in the zip    file.</p>
+<h4>Using Save As</h4>
+<p>If you want to open models built in SQL Developer Data Modeler 2.0, you must    use &quot;Save As&quot; before you start making changes in the SQL Developer    Data Modeler 3.0. <strong>Please note</strong>:  Early adopter releases are not    supported, so if you have been using the early adopter releases, you are advised    to update the original models created in SQL Developer Data Modeler 2.0 release.</p>
+<h4>Printing</h4>
+<p>You can print your diagrams to a number of file formats, including PDF,    PNG, JPG, SVG.</p>
+<h4><a name="rep"></a>Using the Reporting Repository</h4>
+<p>You can export your designs to a reporting repository. Read the online help
+  or the <a href="custom:external:http://www.oracle.com/technetwork/developer-tools/datamodeler/datamodelerfaq-167683.html">
+  FAQ</a> for more information. There is a brief Oracle by Example tutorial that
+  walks you through creating and accessing the reporting repository and running
+  the reports. Search for &quot;Data Modeler&quot; in the <a href="custom:external:http://apex.oracle.com/pls/apex/f?p=44785">Oracle
+  Learning Library</a> for all tutorials.<br />
+  <strong>Note: </strong> The reporting schema has been updated and so you can
+  use the update script (see the installation directory, \datamodeler\reports)
+  that will apply changes to an existing repository created with Data Modeler
+  2.0. The update script is not required when an existing repository is deleted
+  and a new repository created.</p>
+<p>SQL Developer Data Modeler 3.0 introduces integrated reporting. See <a href="#nf">New    Features</a> for more.</p>
+<p>SQL Developer Data Modeler 3.0 reporting repository is also supported on Oracle
+  Database Express Edition 10g.</p>
+<h4>Oracle Designer Import</h4>
+<p>- SQL Developer Data Modeler connects to and imports directly from the Oracle    Designer repository.<br />
+- The following is a list of supported imports from Oracle Designer</p>
+<blockquote>
+<p>&nbsp;&nbsp;&nbsp;&nbsp; Domains, object (structured) types, collection types<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Entities, relationships, arcs, entity inheritance      hierarchies<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Tables, views, foreign keys, arcs<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Triggers for tables and views<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Snapshots, clusters, synonyms, sequences<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Each diagram that contains tables is transformed      into a subview in the Relational model<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Each diagram that contains entities is transformed      into a subview in the Logical model<br />
+&nbsp;&nbsp;&nbsp;&nbsp; Each diagram that contains object (structured) types      is transformed into a subview in the Data Types model</p>
+</blockquote>
+<p>- SQL Developer Data Modeler does not import tablespaces, stored procedures, packages,    functions and data flow diagrams from the Oracle Designer Repository. (Support for    these are planned for a future release) As these structures are supported in the product, users can import these definitions into SQL Developer Data Modeler by connecting    directly to the Oracle Data Dictionary.</p>
+<h4><strong>Domains</strong></h4>
+<p>- SQL Developer Data Modeler does not include a default domains file.<strong>    </strong><br />
+- To create new domain definitions, select <strong>Tools &gt; Domains Administration</strong>    and click Add to create and add your own domains. These domains are added to    the default file, defaultdomains.xml and can be used for all your projects.<br />
+- To create a named domains file, select <strong>Tools &gt; Domains Administration</strong>    and click the Select button, next to the Domains File field. Type in a new file    name and click open. Now you can add all the new domains to this file as described.    In order to use the new file you need to import these domains into your current    design, otherwise the default domains file is used.To import a domains file.    select <strong>File &gt; Import &gt; Domains</strong>. You can accept all the    domains or select those you want to import individually.</p>
+<h4>Comparing Logical Models</h4>
+<p>To compare two logical models, ensure you have one model open and then select    <strong>File &gt; Import &gt; Data Modeler Design</strong>. You can now select    the logical model for the comparison. Once you have made the selection, you    are presented with the Compare Merge dialog.</p>
+<h4>Comparing Relational Models and Generation Alter DDL scripts</h4>
+<p>- To compare two relational models, ensure you have one relational model open    in the design and then select <strong>File &gt; Import &gt; Data Dictionary</strong>    (or DDL). In the import dialog you get the choice to &quot;Swap Target Model&quot;.    This drives the point of truth and the resulting merge compare dialog. You can    elect either to merge the models or to View DDL to see the DDL to update the    data dictionary.<br />
+- The current model can also be compared to another Data Modeler design using    <strong>Tools &gt; Compare /Merge Models.</strong></p>
+<h4>Security</h4>
+<p>All passwords set in the physical model are encrypted when saving a design    in the file system.</p>
+<h4>Delete Rules</h4>
+<p>The Tools &gt; Preferences &gt;Data Modeler &gt; Model &gt; Relational &gt;Default    Foreign Key Delete Rule defines the delete rule when a new FK is created. If    you create a model by importing a DDL script, then ensure the option is set    as required before the import.</p>
+<h4>Cloning Physical Models</h4>
+<p>When cloning the physical details from one model to another, ensure you have
+  <em>saved</em> the database you want to clone from. Note you can only clone
+  databases of the same release or lower. i.e. to populate a new Oracle Database
+  11g physical model, you can select a saved Oracle Database 11g or earlier.</p>
+<h4>Adding a Design to a Subversion Repository</h4>
+<p>You can add you design to a Subversion repository using a few different approaches;
+  either from within SQL Developer Data Modeler, or by using a separate client.</p>
+<ul>
+  <li>If you save the full design to the Subversion repository using another tool,
+    then when you open SQL Developer Data Modeler, check out the design and commit
+    the design immediately. This commit action sets the repository property against
+    the design within the product.</li>
+  <li>You are advised to add your designs to the Subversion repository from within
+    the Data Modeler.
+    <ul>
+      <li>Create a new remote directory in the Data Modeler and check that out.</li>
+      <li>Open your design in the Data Modeler and save it to the checked out
+        directory. This action sets the repository property against the design
+        within the product and your design is now under version control. </li>
+    </ul>
+  </li>
+</ul>
+<p>For more information on using Subversion with SQL Developer Data Modeler see
+  the Documentation and the <a href="custom:external:http://www.oracle.com/technetwork/developer-tools/datamodeler/demonstrations-224554.html">online
+  demonstrations</a> available.</p>
+<h4>Creating User Defined Design Rules and Transformations</h4>
+<p>SQL Developer Data Modeler 3.0 allows users to build scripts for user defined
+  design rules and transformations. Object properties are described in &quot;datamodeler/datamodeler/xmlmetadata/doc&quot;
+  directory; use index.html.</p>
+<p>The product provides a few samples as illustrations of user defined design
+  rules and transformations. For more information see the Documentation and the
+  <a href="custom:external:http://www.oracle.com/technetwork/developer-tools/datamodeler/demonstrations-224554.html">online
+  demonstrations</a> available.</p>
+<h3><a name="nf" id="nf"></a>New Features</h3>
+<p>There is a list of <a href="custom:external:http://www.oracle.com/technetwork/developer-tools/datamodeler/newfeatures30-224506.html">new    features</a> available for review. Watch the new feature <a href="custom:external:http://www.oracle.com/technetwork/developer-tools/datamodeler/learnmore/index.html">demonstrations</a>    available online.</p>
+<h3><a name="Import"></a>Supported Import formats</h3>
+<h4><a name="des"></a>From Other Modeling Tools</h4>
+<ul>
+    <p>- Oracle Designer 9i and above <br />
+    - CA Erwin Data Modeler 4.x and 7.x<br />
+    - Sterling COOL: DBA V2.1, Sterling Bsnteam V7.2 and Cayenne Bsnteam V7.2 formats<br />
+    - For Multi-Dimensional Models<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; Cube Views metadata<br />
+    &nbsp;&nbsp;&nbsp;&nbsp; XMLA</p>
+</ul>
+<h4>Database Imports</h4>
+<p>Oracle SQL Developer Data Modeler imports from:</p>
+<p>- Supported Oracle Databases, Microsoft SQL Server 2000 or 2005, DB2/LUW V7    or V8, IBM DB2 for OS/390 and z/OS script file<br />
+- Supported Oracle Databases, Microsoft SQL Server2000 or 2005, IBM DB2/LUW    V7 or V8, IBM DB2 for OS/390 and z/OS and ODBC/JDBC compliant data dictionary</p>
+<p><strong>IMPORTANT: </strong><strong> </strong>Oracle does not ship the non-Oracle    drivers.To access the non-Oracle databases, you need to download and add the    drivers required.</p>
+<p>The drivers can be downloaded from the following links:</p>
+<p>- For Microsoft SQL Server:  <br />
+&nbsp;&nbsp;<a href="custom:external:http://www.microsoft.com/downloads/details.aspx?familyid=07287B11-0502-461A-B138-2AA54BFDC03A&amp;displaylang=en">    SQL Server 2000</a> For SQL Server 2000 you must make sure you have installed    all three .jar files:  msbase.jar, mssqlserver.jar and msutil.jar <br />
+&nbsp;&nbsp; <a href="custom:external:http://www.microsoft.com/downloads/details.aspx?familyid=C47053EB-3B64-4794-950D-81E1EC91C1BA&amp;displaylang=en">SQL    Server 2005</a> The drivers for SQL Server 2000 can be used for import from    SQL Server 2005 database. <br />
+- For DB2/LUW:  <br />
+&nbsp;&nbsp; <a href="custom:external:http://www-306.ibm.com/software/data/db2/express/additional-downloads.html">IBM    Data Server Driver for JDBC and SQLJ</a> The driver for ODBC/JDBC is included    in Java, so there is nothing extra to install</p>
+<p>To add the drivers yourself:  Go to <strong>Tools &gt; Preferences &gt; Data    Modeler &gt; Third Party JDBC drivers</strong></p>
+<p>After installing, the drivers must be set in the Preferences dialog as follows:</p>
+<p>- SQL Server 2000 - msbase.jar, mssqlserver.jar, msutil.jar<br />
+- SQL Server 2005 - sqljdbc.jar<br />
+- DB2/UDB&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - db2jcc.jar</p>
+<h3><a name="Export"></a>Supported Export formats</h3>
+<p>- Supported Oracle Databases<br />
+- Microsoft SQL Server 2000 or 2005<br />
+- IBM DB2/LUW V7 and V8 script file<br />
+- Multi-dimensional support <br />
+&nbsp;&nbsp;&nbsp; Cube View Metadata <br />
+&nbsp;&nbsp;&nbsp; XMLA and Oracle ROLAP and MOLAP (AW)<br />
+- CSV file</p>
+<h3><a name="known" id="Issues_524"></a>Known Issues</h3>
+<p>We are aware of the following limitations and issues. This list is not exhaustive,    but a list of issues that you may encounter.</p>
+<ul>
+  <li>DDL Generation
+    <ul>
+      <li>9132628: DDL generation sequence for table column associated with scope
+        table is incorrect for DB2</li>
+    </ul>
+  </li>
+  <li>Diagrams
+    <ul>
+      <li>9978648: Logical diagrammer does not handle 'select all' drag and drop
+        of objects well</li>
+      <li>9707703: New entities are not aligned with the grid in a diagram</li>
+      <li>8771771: Problems with ui on mac</li>
+    </ul>
+  </li>
+  <li>Domains
+    <ul>
+      <li>10367220: Domains administration: changed properties not stored unless
+        you click &quot;apply&quot; before selecting next element</li>
+    </ul>
+  </li>
+  <li>Engineering
+    <ul>
+      <li>9236128: Don't see attributes of subtypes in engineer window anywhere</li>
+      <li>9192760: Replacing the word separator for relational model with *(star)
+        when reverse engineering not possible</li>
+    </ul>
+  </li>
+  <li>Importing
+    <ul>
+      <li>8947581: Error on export to Oracle AW options</li>
+      <li>8947295: Export model as Microsoft XMLA and import multidimensional
+        model missing</li>
+      <li>10375217: Export to reporting schema: Create database connection fails</li>
+      <li>10181913: Generate in DDL not used in compare/merge functionality</li>
+      <li>11684911: Change in named not null constraint is not detected during
+        merge for existing tables</li>
+    </ul>
+  </li>
+  <li>General
+    <ul>
+      <li>10209593: Cannot create PK for nested column - when column is based
+        on object type</li>
+      <li>10336683: Unique constraint generate and engineer checkboxes - &quot;auto&quot;
+        uncheck?</li>
+      <li>10216769: Linux: Unable to delete more than one entity from the browser</li>
+      <li>11665948: Inconsistent initial selection in data dictionary import wizard</li>
+    </ul>
+  </li>
+  <li>Logical Models
+    <ul>
+      <li>9170609: Change default preference for relationship to mandatory for
+        target</li>
+      <li>10247284: FK attribute doesn't follow changes in name of PK attribute
+        or when new is added</li>
+      <li>9203139: Need undo feature for diagram editors</li>
+      <li>9482914: Self referencing relations (pigs ear) can not be rearranged
+        on logical diagram</li>
+    </ul>
+  </li>
+  <li>Physical Models
+    <ul>
+      <li>9166084: Clone from operation works only on saved status of source model</li>
+      <li>8845591: Compare/merge updates column's physical properties even if
+        column is unselected</li>
+      <li>9953350: Adding &quot;v1&quot; suffix to foreign key names in physical
+        model</li>
+      <li>9953212: Missing column level permissions for Oracle tables</li>
+      <li>9808343: Permissions dialogs for Oracle functions and packages</li>
+    </ul>
+  </li>
+  <li>Relational Models
+    <ul>
+      <li>8839456: Can't browse nested columns</li>
+      <li>9266599: Change pii to personally identifiable information in column
+        security property</li>
+      <li>8975504: Check required for 'insert join clause for foreign key' button
+        in view builder</li>
+      <li>9305814: Compare relational models in one design</li>
+      <li>11682224: Copy and paste table doesn't work properly after import from
+        database dictionary or DDL script. Workaround: Save and reopen the design.</li>
+    </ul>
+  </li>
+  <li>Versioning
+    <ul>
+      <li>10040745: Version history: Compare can be slow to open window</li>
+    </ul>
+  </li>
+</ul>
+<h3><a name="fixed" id="Issues_524"></a>Bugs Fixed</h3>
+<p>To see a list of bugs fixed and enhancement requests implemented in SQL Developer
+  Data Modeler 3.0, please follow see <a href="custom:external:http://www.oracle.com/technetwork/developer-tools/datamodeler/bugsfixed30-237507.html">Bugs
+  Fixed</a>. The list is not exhaustive, but does include a number of issues reported
+  by users. SQL Developer Data Modeler is supported through <a href="custom:external:https://support.oracle.com/">My
+  Oracle Support</a> for all users with an Oracle Database support license. Your
+  feedback is also welcomed on the <a href="custom:external:http://forums.oracle.com/forums/forum.jspa?forumID=1317">Data
+  Modeler OTN forum</a>.</p>
+<h3><a name="Doc"></a>Documentation</h3>
+<p>You can use the documentation in the Oracle SQL Developer Data Modeler Help or access the <a href="custom:external:http://www.oracle.com/pls/topic/lookup?ctx=sqldev30&amp;id=homepage">online documentation</a>.</p>
+<h3><a name="More"></a>Finding More Information</h3>
+<p>There is a dedicated <a href="custom:external:http://www.oracle.com/technetwork/developer-tools/datamodeler/">Oracle    SQL Developer Data Modeler</a> page. You can also reach this page from the <a href="custom:external:http://www.oracle.com/technology/products/database/sql_developer/index.html">SQL    Developer OTN</a> homepage.<br />
+Use the <a href="custom:external:http://forums.oracle.com/forums/forum.jspa?forumID=1317">Oracle    SQL Developer Data Modeler</a> forum on OTN for any discussion or queries.</p>

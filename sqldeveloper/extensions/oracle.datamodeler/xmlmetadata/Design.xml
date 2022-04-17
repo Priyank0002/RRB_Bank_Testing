@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.Design parentClass="oracle.dbtools.crest.model.ModelIDObject" xmlName="OSDM_Design">
+   <move_property name="applyNameStandardization" dataType="boolean" defaultValue="" xmlName="applyNameStandardization" xmlType="element" getter="isApplyNameStandardization" setter="setApplyNameStandardization" reffered="false"/>
+   <move_property name="applyNameSubstitution" dataType="boolean" defaultValue="" xmlName="applyNameSubstitution" xmlType="element" getter="isApplyNameSubstitution" setter="setApplyNameSubstitution" reffered="false"/>
+   <move_collection name="attrColPropertyList" dataType="interface java.util.List" defaultValue="" xmlName="eng_Attribute_Column" itemXmlName="property" xmlType="element" getter="getAttrColPropertyList" setter="setAttrColPropertyList" reffered="false" isEngPropertyHolderItem="true"/>
+   <property name="capitalNames" dataType="boolean" defaultValue="" xmlName="capitalNames" xmlType="element" getter="isCapitalNames" setter="setCapitalNames" reffered="false"/>
+   <aa_property name="cleaning" dataType="boolean" defaultValue="" xmlName="cleaning" xmlType="element" getter="isCleaning" setter="setCleaning" reffered="false"/>
+   <aa_property name="closing" dataType="boolean" defaultValue="" xmlName="closing" xmlType="element" getter="isClosing" setter="setClosing" reffered="false"/>
+   <aa_property name="currentOperation" dataType="int" defaultValue="" xmlName="currentOperation" xmlType="element" getter="getCurrentOperation" setter="setCurrentOperation" reffered="false"/>
+   <aa_property name="deleteWithoutOrigin" dataType="boolean" defaultValue="" xmlName="deleteWithoutOrigin" xmlType="element" getter="isDeleteWithoutOrigin" setter="setDeleteWithoutOrigin" reffered="false"/>
+   <property name="designId" dataType="java.lang.String" defaultValue="" xmlName="designId" xmlType="element" getter="getDesignID" setter="setDesignID" reffered="false"/>
+   <aa_property name="designLevelSettings" dataType="java.lang.String" defaultValue="" xmlName="designLevelSettings" xmlType="element" getter="getDesignLevelSettings" setter="setDesignLevelSettings" reffered="false"/>
+   <aa_property name="disableTreeUpdate" dataType="boolean" defaultValue="" xmlName="disableTreeUpdate" xmlType="element" getter="isDisableTreeUpdate" setter="setDisableTreeUpdate" reffered="false"/>
+   <move_property name="engDateFormat" dataType="java.lang.String" defaultValue="" xmlName="engDateFormat" xmlType="element" getter="getEngDateFormat" setter="setEngDateFormat" reffered="false"/>
+   <move_property name="engTimestampFormat" dataType="java.lang.String" defaultValue="" xmlName="engTimestampFormat" xmlType="element" getter="getEngTimestampFormat" setter="setEngTimestampFormat" reffered="false"/>
+   <move_property name="engTimestampWTZFormat" dataType="java.lang.String" defaultValue="" xmlName="engTimestampWTZFormat" xmlType="element" getter="getEngTimestampWTZFormat" setter="setEngTimestampWTZFormat" reffered="false"/>
+   <move_property name="engineerAsSubView" dataType="boolean" defaultValue="" xmlName="engineerAsSubView" xmlType="element" getter="isEngineerAsSubView" setter="setEngineerAsSubView" reffered="false"/>
+   <move_property name="engineerCoordinates" dataType="boolean" defaultValue="" xmlName="engineerCoordinates" xmlType="element" getter="isEngineerCoordinates" setter="setEngineerCoordinates" reffered="false"/>
+   <move_property name="engineerGenerated" dataType="boolean" defaultValue="" xmlName="engineerGenerated" xmlType="element" getter="isEngineerGenerated" setter="setEngineerGenerated" reffered="false"/>
+   <col_property name="entTablePropertyList" dataType="interface java.util.List" defaultValue="" xmlName="entTablePropertyList" xmlType="element" getter="getEntTablePropertyList" setter="setEntTablePropertyList" reffered="false"/>
+   <move_property name="excludeFromTree" dataType="boolean" defaultValue="" xmlName="excludeFromTree" xmlType="element" getter="getExcludeFromTree" setter="setExcludeFromTree" reffered="false"/>
+   <aa_property name="exportFileName" dataType="java.lang.String" defaultValue="" xmlName="exportFileName" xmlType="element" getter="getExportFileName" setter="setExportFileName" reffered="false"/>
+   <aa_property name="fileName" dataType="java.lang.String" defaultValue="" xmlName="fileName" xmlType="element" getter="getFileName" setter="setFileName" reffered="false"/>
+   <aa_property name="importToCurrent" dataType="boolean" defaultValue="" xmlName="importToCurrent" xmlType="element" getter="isImportToCurrent" setter="setImportToCurrent" reffered="false"/>
+   <col_property name="keyIdxPropertyList" dataType="interface java.util.List" defaultValue="" xmlName="keyIdxPropertyList" xmlType="element" getter="getKeyIdxPropertyList" setter="setKeyIdxPropertyList" reffered="false"/>
+   <aa_property name="loadFromDB" dataType="boolean" defaultValue="" xmlName="loadFromDB" xmlType="element" getter="isLoadFromDB" setter="setLoadFromDB" reffered="false"/>
+   <aa_property name="loadedVersion" dataType="float" defaultValue="" xmlName="loadedVersion" xmlType="element" getter="getLoadedVersion" setter="setLoadedVersion" reffered="false"/>
+   <aa_property name="merging" dataType="boolean" defaultValue="" xmlName="merging" xmlType="element" getter="isMerging" setter="setMerging" reffered="false"/>
+   <bb_property name="multidimensionalDesign" dataType="oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesign" defaultValue="" xmlName="multidimensionalDesign" xmlType="element" getter="getMultidimensionalDesign" setter="setMultidimensionalDesign" reffered="true"/>
+   <aa_property name="newDesign" dataType="boolean" defaultValue="" xmlName="newDesign" xmlType="element" getter="isNewDesign" setter="setNewDesign" reffered="false"/>
+   <move_property name="notFornewObjects" dataType="boolean" defaultValue="" xmlName="notFornewObjects" xmlType="element" getter="getNotForNewObjects" setter="setNotForNewObjects" reffered="false"/>
+   <aa_property name="propagatepKChahges" dataType="boolean" defaultValue="" xmlName="propagatepKChahges" xmlType="element" getter="isPropagatePKChahges" setter="setPropagatePKChahges" reffered="false"/>
+   <cc_property name="rdBMSSiteSet" dataType="oracle.dbtools.crest.model.design.storage.RDBMSSiteSet" defaultValue="" xmlName="rdBMSSiteSet" xmlType="element" getter="getRDBMSSiteSet" setter="setRDBMSSiteSet" reffered="true"/>
+   <col_property name="relFKPropertyList" dataType="interface java.util.List" defaultValue="" xmlName="relFKPropertyList" xmlType="element" getter="getRelFKPropertyList" setter="setRelFKPropertyList" reffered="false"/>
+   <bb_property name="relationalDesign" dataType="oracle.dbtools.crest.model.design.relational.RelationalDesign" defaultValue="" xmlName="relationalDesign" xmlType="element" getter="getRelationalDesign" setter="setRelationalDesign" reffered="true"/>
+   <move_property name="replaceSpaces" dataType="boolean" defaultValue="" xmlName="replaceSpaces" xmlType="element" getter="isReplaceSpaces" setter="setReplaceSpaces" reffered="false"/>
+   <aa_property name="saveDefaultDomains" dataType="boolean" defaultValue="" xmlName="saveDefaultDomains" xmlType="element" getter="isSaveDefaultDomains" setter="setSaveDefaultDomains" reffered="false"/>
+   <aa_property name="showEngineeringInTree" dataType="boolean" defaultValue="" xmlName="showEngineeringInTree" xmlType="element" getter="isShowEngineeringInTree" setter="setShowEngineeringInTree" reffered="false"/>
+   <aa_property name="showMappingsInEngineeringDialog" dataType="boolean" defaultValue="" xmlName="showMappingsInEngineeringDialog" xmlType="element" getter="isShowMappingsInEngineeringDialog" setter="setShowMappingsInEngineeringDialog" reffered="false"/>
+   <move_property name="showselPropsOnly" dataType="boolean" defaultValue="" xmlName="showselPropsOnly" xmlType="element" getter="getShowSelPropsOnly" setter="setShowSelPropsOnly" reffered="false"/>
+   <move_property name="unloadDirectory" dataType="java.lang.String" defaultValue="" xmlName="unloadDirectory" xmlType="element" getter="getUnloadDirectory" setter="setUnloadDirectory" reffered="false"/>
+   <move_property name="usePreferredAbbreviation" dataType="boolean" defaultValue="" xmlName="usePreferredAbbreviation" xmlType="element" getter="isUsePreferredAbbreviation" setter="setUsePreferredAbbreviation" reffered="false"/>
+   <property name="version" dataType="float" defaultValue="" xmlName="version" xmlType="attribute" getter="getVersion" setter="setLoadedVersion" reffered="false"/>
+   <col_property name="viewPropertyList" dataType="interface java.util.List" defaultValue="" xmlName="viewPropertyList" xmlType="element" getter="getViewPropertyList" setter="setViewPropertyList" reffered="false"/>
+   <roproperty name="design" dataType="boolean" getter="isDesign"/>
+   <roproperty name="editable" dataType="boolean" getter="isEditable"/>
+   <roproperty name="loading" dataType="boolean" getter="isLoading"/>
+   <roproperty name="repositoryrelated" dataType="boolean" getter="isRepositoryRelated"/>
+   <roproperty name="system" dataType="boolean" getter="isSystem"/>
+   <roproperty name="allTopLevelObjects" dataType="interface java.util.Collection" getter="getAllTopLevelObjects"/>
+   <roproperty name="businessInfoDesign" dataType="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" getter="getBusinessInfoDesign"/>
+   <roproperty name="changeRequestSet" dataType="oracle.dbtools.crest.model.ChangeRequestSet" getter="getChangeRequestSet"/>
+   <roproperty name="constraintSet" dataType="oracle.dbtools.crest.model.design.constraint.ConstraintSet" getter="getConstraintSet"/>
+   <roproperty name="corrObject" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getCorrObject"/>
+   <roproperty name="dldomains" dataType="oracle.dbtools.crest.model.design.DLDomains" getter="getDLDomains"/>
+   <roproperty name="dlSettingsObject" dataType="oracle.dbtools.crest.model.design.Design$DLSettingsObject" getter="getDLSettingsObject"/>
+   <roproperty name="dataTypesdesign" dataType="oracle.dbtools.crest.model.design.datatypes.DataTypesDesign" getter="getDataTypesDesign"/>
+   <roproperty name="defaultRdBMSTypeSet" dataType="oracle.dbtools.crest.model.design.storage.RDBMSTypeSet" getter="getDefaultRDBMSTypeSet"/>
+   <roproperty name="designObject" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getDesignObject"/>
+   <roproperty name="designPartView" dataType="oracle.dbtools.crest.swingui.DesignPartView" getter="getDesignPartView"/>
+   <roproperty name="designPartsTodeleteFromLocalFS" dataType="interface java.util.List" getter="getDesignPartsToDeleteFromLocalFS"/>
+   <roproperty name="designPartsTodeleteFromRepository" dataType="interface java.util.List" getter="getDesignPartsToDeleteFromRepository"/>
+   <col_property name="domainFileNames" dataType="interface java.util.Collection" getter="getDomainFileNames"/>
+   <roproperty name="domainSet" dataType="oracle.dbtools.crest.model.design.DomainSet" getter="getDomainSet"/>
+   <roproperty name="exportedDesignParts" dataType="interface java.util.List" getter="getExportedDesignParts"/>
+   <roproperty name="extendedMap" dataType="oracle.dbtools.crest.model.xtdmapping.ExtendedMap" getter="getExtendedMap"/>
+   <roproperty name="fkMap" dataType="interface java.util.Map" getter="getFKMap"/>
+   <roproperty name="fwDEngineering" dataType="oracle.dbtools.crest.model.design.engineering.FWDEngineering" getter="getFWDEngineering"/>
+   <roproperty name="firstOfType" dataType="oracle.dbtools.crest.model.design.storage.RDBMSSite" getter="getFirstOfType"/>
+   <roproperty name="firstOpenRelationalDesign" dataType="oracle.dbtools.crest.model.design.relational.RelationalDesign" getter="getFirstOpenRelationalDesign"/>
+   <roproperty name="importedDesignNames" dataType="[Ljava.lang.String" getter="getImportedDesignNames"/>
+   <roproperty name="logicalDatatypeSet" dataType="oracle.dbtools.crest.model.design.LogicalDatatypeSet" getter="getLogicalDatatypeSet"/>
+   <roproperty name="logicalDesign" dataType="oracle.dbtools.crest.model.design.logical.LogicalDesign" getter="getLogicalDesign"/>
+   <roproperty name="multidimensionalDesigns" dataType="oracle.dbtools.crest.model.design.multidimensional.MultidimensionalDesignSet" getter="getMultidimensionalDesigns"/>
+   <roproperty name="processModel" dataType="oracle.dbtools.crest.model.design.process.ProcessModel" getter="getProcessModel"/>
+   <roproperty name="rdBMS" dataType="java.lang.String" getter="getRDBMS"/>
+   <roproperty name="rdBMSTypeSet" dataType="oracle.dbtools.crest.model.design.storage.RDBMSTypeSet" getter="getRDBMSTypeSet"/>
+   <roproperty name="rlDomains" dataType="oracle.dbtools.crest.model.design.RLDomains" getter="getRLDomains"/>
+   <roproperty name="relationalDesigns" dataType="oracle.dbtools.crest.model.design.relational.RelationalDesignSet" getter="getRelationalDesigns"/>
+   <roproperty name="reverseEngineering" dataType="oracle.dbtools.crest.model.design.engineering.ReverseEngineering" getter="getReverseEngineering"/>
+   <roproperty name="storableDesignObjects" dataType="interface java.util.Collection" getter="getStorableDesignObjects"/>
+   <roproperty name="storableDesignParts" dataType="interface java.util.List" getter="getStorableDesignParts"/>
+   <roproperty name="storageDesign" dataType="oracle.dbtools.crest.model.design.storage.StorageDesign" getter="getStorageDesign"/>
+   <roproperty name="storageDesignFactory" dataType="oracle.dbtools.crest.model.design.storage.StorageDesignFactory" getter="getStorageDesignFactory"/>
+   <roproperty name="topDesignObject" dataType="oracle.dbtools.crest.model.design.DesignObject" getter="getTopDesignObject"/>
+   <roproperty name="topDesignObjectId" dataType="java.lang.String" getter="getTopDesignObjectId"/>
+   <roproperty name="undoManager" dataType="oracle.dbtools.crest.model.design.undo.DP_UndoManager" getter="getUndoManager"/>
+   <roproperty name="version" dataType="float" getter="getVersion"/>
+</oracle.dbtools.crest.model.design.Design>

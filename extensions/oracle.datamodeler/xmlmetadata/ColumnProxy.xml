@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.ColumnProxy parentClass="oracle.dbtools.crest.model.design.storage.RelationalObjectProxy">
+   <roproperty name="column" dataType="oracle.dbtools.crest.model.design.relational.Column" getter="getColumn"/>
+   <roproperty name="dataType" dataType="interface oracle.dbtools.crest.model.design.datatypes.Datatype" getter="getDataType"/>
+   <roproperty name="datatypeString" dataType="java.lang.String" getter="getDatatypeString"/>
+   <roproperty name="tableProxyR" dataType="oracle.dbtools.crest.model.design.storage.TableProxy" getter="getTableProxyR"/>
+</oracle.dbtools.crest.model.design.storage.ColumnProxy>

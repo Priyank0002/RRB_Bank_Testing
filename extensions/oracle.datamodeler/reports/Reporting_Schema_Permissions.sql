@@ -1,0 +1,15 @@
+-- Permissions needed by oracle user to use reporting schema functionality
+CREATE OR REPLACE DIRECTORY OSDDM_REPORTS_DIR AS <OS DIRECTORY>;
+GRANT READ, WRITE ON DIRECTORY OSDDM_REPORTS_DIR TO <USER>;
+GRANT CREATE SESSION TO <USER>;
+GRANT RESOURCE TO <USER>;
+GRANT CREATE TABLE TO <USER>;
+GRANT CREATE SEQUENCE TO <USER>;
+GRANT CREATE VIEW TO <USER>;
+GRANT CREATE PROCEDURE TO <USER>;
+
+-- Non Oracle Database 10g Express Edition only
+CALL  DBMS_JAVA.GRANT_PERMISSION(<USER>, 'SYS:java.io.FilePermission', '<<ALL FILES>>', 'read' );
+
+-- Oracle Database 10g Express Edition only
+GRANT EXECUTE ON UTL_FILE TO public;

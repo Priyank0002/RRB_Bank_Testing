@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g parentClass="oracle.dbtools.crest.model.design.storage.oracle.v10g.ColumnProxyOraclev10g">
+   <property name="columnExpression" dataType="java.lang.String" defaultValue="" xmlName="columnExpression" xmlType="element" getter="getColumnExpression" setter="setColumnExpression" reffered="false"/>
+   <property name="expressionChanged" dataType="boolean" defaultValue="false" xmlName="expressionChanged" xmlType="element" getter="isExpressionChanged" setter="setExpressionChanged" reffered="false"/>
+   <roproperty name="computed" dataType="boolean" getter="isComputed"/>
+</oracle.dbtools.crest.model.design.storage.oracle.v11g.ColumnProxyOraclev11g>

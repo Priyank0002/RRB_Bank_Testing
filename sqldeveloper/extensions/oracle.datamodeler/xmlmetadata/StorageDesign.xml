@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.storage.StorageDesign parentClass="oracle.dbtools.crest.model.AbstractDesign">
+   <property name="siteType" dataType="int" defaultValue="-1" xmlName="siteType" xmlType="element" getter="getSiteType" setter="setSiteType" reffered="false"/>
+   <property name="siteID" dataType="java.lang.String" defaultValue="" xmlName="siteID" xmlType="element" getter="getSiteID" setter="setSiteID" reffered="false"/>
+   <property name="siteName" dataType="java.lang.String" defaultValue="" xmlName="siteName" xmlType="element" getter="getSiteName" setter="setSiteName" reffered="false"/>
+</oracle.dbtools.crest.model.design.storage.StorageDesign>
